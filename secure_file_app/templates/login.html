@@ -1,0 +1,28 @@
+
+{% extends "index.html "%}
+{% block body %}
+<center><div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
+                    <div class="booking-form">
+                        <h1>Login to secure your data</h1>
+                        <form role="form" method="post" action="/doLogin">
+                            {% csrf_token %}
+                            <div class="check-dateindex.htmlindex.html">
+                                <label>Email</label>
+                                <input type="email"  name="email">
+                                <i class="icon_calendar"></i>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="check-date">
+                                <label>Password</label>
+                                <input type="password"  name="password">
+                                <i class="icon_calendar"></i>
+                            </div>
+                            <br>
+                            <br>
+                            <button type="submit" name="login">Login</button>
+                        </form>
+                    </div>
+                </div></center>
+<br>
+{% endblock %}

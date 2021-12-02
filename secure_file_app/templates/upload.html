@@ -1,0 +1,29 @@
+
+{% extends "user_home.html"%}
+{% block body %}
+<center>
+    <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="booking-form" >
+                        {% csrf_token %}
+                            <br>
+                         <div class="input-group">
+                             <label>Enter the Key:</label>
+                                <input type="text" placeholder="Key" name="key" >
+                             </div>
+                              <br>
+                              <br>
+                             <div class="custom-file">
+                                 <label>Upload File</label>
+                                 <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="file">
+                             </div>
+                                <br>
+                                <br>
+                            <div>
+                                <button type="submit" name="upload">Secure Upload</button>
+                            </div>
+                        </div>
+                    </form>
+    </div>
+</center>
+{% endblock %}

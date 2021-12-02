@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  {% load static %}
+  <title>Secure File storage</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="#">Secure<span class="logo_colour">File Storage </span></a></h1>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href= "/user_home">Home</a></li>
+          <li><a href="/upload">Upload</a></li>
+            <li><a href="/view">View File</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    {% block body %}
+    <div id="content_header"></div>
+    <div id="site_content">
+        <div>
+            <img src="{% static 'img/secure3.jpg' %}" alt>
+        </div>
+	  <div id="sidebar_container">
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <!-- insert your sidebar items here -->
+            <h3>Latest News</h3>
+            <h4>Important files are secure</h4>
+            <p>2014 sees the redesign of our website. Take a look around and let us know what you think.<br/><a href="#">Read more</a></p>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3>File Details</h3>
+            <ul>
+              <li><a href="/upload">Upload</a></li>
+              <li><a href="/view">View File</a></li>
+            </ul>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>Welcome to the Secure File Storage</h1>
+       <p>Secure File Storage allows Premium users to keep important documents at their fingertips without having to worry about losing them or someone getting unwanted access to them.
+       </p>
+        <p>Secure File Storage uses the same powerful encryption and security infrastructure protecting your passwords and Secure Notes to store documents in your Dashlane app.</p>
+        <p>Wherever you have access to your devices, you'll have access to those files. And because Dashlane backs up your encrypted data, you never have to worry about losing your files.</p>
+      </div>
+    </div>
+    {% endblock %}
+    <div id="content_footer"></div>
+    <div id="footer">
+      <p><a href="#">Home</a> | <a href="#">Examples</a> | <a href="#">A Page</a> | <a href="#">Contact Us</a></p>
+      <p>Copyright &copy; </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% extends "index.html "%}
+{% block body %}
+<center><div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
+                    <div class="booking-form">
+                        <br>
+                        <h1>Please provide the account Information</h1>
+                        <form method="post" action="/add_user_save">
+                            {% csrf_token %}
+                            <div class="check-date">
+                                <label>Username</label>
+                                <input type="text"  name="username">
+                                <i class="icon_calendar"></i>
+                            </div>
+                            <br>
+                            <div class="check-date">
+                                <label>Mail ID</label>
+                                <input type="email"  name="email">
+                                <i class="icon_calendar"></i>
+                            </div>
+                              <br>
+                            <div class="check-date">
+                                <label>Password</label>
+                                <input type="password" name="password">
+                                <i class="icon_calendar"></i>
+                            </div>
+                            <br>
+                             <div class="check-date">
+                                <label>Mobile</label>
+                                <input type="text" name="mobile">
+                                <i class="icon_calendar"></i>
+                            </div>
+                            <br>
+                             <div class="check-date">
+                                <label>Address</label>
+                                <input type="text" name="address">
+                                <i class="icon_calendar"></i>
+                            </div>
+                              <br>
+                            <button type="submit">Create Account</button>
+                        </form>
+                    </div>
+                </div></center>
+
+                {% endblock %}
